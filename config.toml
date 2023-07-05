@@ -1,0 +1,9 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = 'ssi'
+
+[params]
+projets="Les partenaires du tank conduisent et réalisent différents projets ayant pour but de faciliter la reconnexion entre l'industrie, le territoire et ses habitants."
+membres="Le Think & Do Tank Sciences, Société & Industrie est un consortium réunissant plusieurs structures publiques et parapubliques. "
+actualites="Retrouvez les activités récentes, rencontres et articles de nos membres et partenaires."
