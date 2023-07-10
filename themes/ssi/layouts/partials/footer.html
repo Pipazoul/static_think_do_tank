@@ -1,0 +1,124 @@
+<div class="footer">
+    <div class="section-logos accueil wf-section"><img src="/static/images/logos-bandeau-blanc-transparent.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 3333px) 90vw, 3000px" srcset="images/logos-bandeau-blanc-transparent-p-500.png 500w, images/logos-bandeau-blanc-transparent-p-800.png 800w, images/logos-bandeau-blanc-transparent-p-1080.png 1080w, images/logos-bandeau-blanc-transparent-p-1600.png 1600w, images/logos-bandeau-blanc-transparent-p-2000.png 2000w, images/logos-bandeau-blanc-transparent-p-2600.png 2600w, images/logos-bandeau-blanc-transparent.png 3000w" alt="" class="image-19"><img src="/static/images/logos-bandeau-blanc-transparent-vertical.png" loading="lazy" sizes="(max-width: 479px) 90vw, 100vw" srcset="images/logos-bandeau-blanc-transparent-vertical-p-500.png 500w, images/logos-bandeau-blanc-transparent-vertical-p-800.png 800w, images/logos-bandeau-blanc-transparent-vertical-p-1080.png 1080w, images/logos-bandeau-blanc-transparent-vertical.png 1365w" alt="" class="image-20"></div>
+    <div class="div-block-41">
+      <div class="bloc-text-footer">
+        <a href="a_propos" class="link-footer">   À propos     </a>
+        <a href="mentions-legales.html" class="link-footer">Mentions légales     </a>
+        <a href="contact.html" class="link-footer">Contact     </a>
+        <a href="membres" class="link-footer">Membres     </a>
+        <a href="projets" class="link-footer">Galerie de projets     </a>
+        <a href="webdocs/accueil.html" class="link-footer">Webdocs     </a>
+        <a href="https://www.erasme.org/DatAtlas" class="link-footer">M.Ind.     </a>
+        <a href="mediatheque" class="link-footer">Médiathèque     </a>
+        <a href="actualites" class="link-footer">Actualités     </a>
+        <a href="veille" class="link-footer">Veille   </a>
+      </div>
+    </div>
+  </div>
+  <script src="/js/jquery.js" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="/js/webflow.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+const canvas = document.querySelector('canvas.webgl')
+// Scene
+const scene = new THREE.Scene()
+// Objects
+// valeurs d'origine radius .7, tube .2, radial segments 16, tubular segments 100 );
+const geometry = new THREE.TorusGeometry( .8, .2, 16, 100 );
+const particlesGeometry = new THREE.BufferGeometry;
+const particlesCnt = 3000;
+const posArray = new Float32Array(particlesCnt * 3);
+for(let i = 0; i < particlesCnt * 3; i++) {
+    // posArray[i] = Math.random() - 0.5
+    posArray[i] = (Math.random() - 0.5) * (Math.random() * 5)
+}
+particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3))
+// Materials
+const material = new THREE.PointsMaterial({
+    size: 0.005,
+    color: 0xb3b3b3
+})
+const particlesMaterial = new THREE.PointsMaterial({
+    size: 0.005,
+    color: 0xb3b3b3
+})
+// Mesh
+const sphere = new THREE.Points(geometry,material)
+const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial)
+scene.add(sphere, particlesMesh)
+// Lights
+const pointLight = new THREE.PointLight(0xffffff, 0.1)
+pointLight.position.x = 2
+pointLight.position.y = 3
+pointLight.position.z = 4
+scene.add(pointLight)
+/**
+ * Sizes
+ */
+const sizes = {
+    width: window.innerWidth,
+    height: window.innerHeight
+}
+window.addEventListener('resize', () =>
+{
+    // Update sizes
+    sizes.width = window.innerWidth
+    sizes.height = window.innerHeight
+    // Update camera
+    camera.aspect = sizes.width / sizes.height
+    camera.updateProjectionMatrix()
+    // Update renderer
+    renderer.setSize(sizes.width, sizes.height)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+})
+/**
+ * Camera
+ */
+// Base camera
+const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
+camera.position.x = 0
+camera.position.y = 0
+camera.position.z = 2
+scene.add(camera)
+// Controls
+// const controls = new OrbitControls(camera, canvas)
+// controls.enableDamping = true
+/**
+ * Renderer
+ */
+const renderer = new THREE.WebGLRenderer({
+    canvas: canvas,
+    alpha: true
+})
+renderer.setSize(sizes.width, sizes.height)
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+/**
+ * Animate
+ */
+document.addEventListener('mousemove', animateParticles)
+let mouseX = 0
+let mouseY = 0
+function animateParticles(event){
+    mouseX = event.clientX
+    mouseY = event.clientY
+}
+const clock = new THREE.Clock()
+const tick = () =>
+{
+    const elapsedTime = clock.getElapsedTime()
+    // Update objects
+    sphere.rotation.y = .5 * elapsedTime
+    particlesMesh.rotation.y = -.1 * elapsedTime
+    if (mouseX > 0) {
+        particlesMesh.rotation.x = -mouseY * (elapsedTime * 0.00005)
+        particlesMesh.rotation.y = mouseX * (elapsedTime * 0.00005)    
+    }
+    // Update Orbital Controls
+    // controls.update()
+    // Render
+    renderer.render(scene, camera)
+    // Call tick again on the next frame
+    window.requestAnimationFrame(tick)
+}
+tick()
+</script>
