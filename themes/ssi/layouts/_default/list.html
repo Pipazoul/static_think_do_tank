@@ -1,0 +1,10 @@
+{{ partial "head.html" . }}
+<body class="body-6">
+  {{ partial "nav.html" . }}
+    <div>Je suis dans layout/list
+      <h1 id="title">{{ .Title }}</h1>
+        {{ .Content }}
+    </div>
+
+</body>
+
