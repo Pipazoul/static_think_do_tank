@@ -24,7 +24,7 @@
       <div class="div-block-45"></div>
       <div
         style="
-          background-image: url('https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/62ff9018428990e40a7ea8f2_20220531_141430.jpg');
+          background-image: url('featured.jpg');
         "
         class="div-block-17"
       ></div>
@@ -34,7 +34,7 @@
         href="https://erasme.org/Classes-Culturelles-Numeriques-1811"
         target="_blank"
         class="button-4 w-button"
-        >{{ .textBtn }}</a
+        >{{ .Params.textBtn }}</a
       >
       <div class="div-bloc-30px"></div>
       <div class="div-block-16">
@@ -47,222 +47,43 @@
               id="w-node-d61ce0bf-3119-9730-82a5-7f08882c48dd-e71d4f13"
               class="project-label"
             >
-              conduite de projet
+              {{ .Params.section_1_title }}
             </div>
             <a href="/membres/erasme" class="project-info link"
-              >Erasme - Métropole de Lyon</a
+              >{{ .Params.section_1_text }}</a
             >
           </div>
           <div class="div-projet-info">
-            <div class="project-label">type de projet</div>
+            <div class="project-label">{{ .Params.section_2_title }}</div>
             <div class="w-dyn-list">
               <div role="list" class="w-dyn-items">
                 <div role="listitem" class="collection-item-3 w-dyn-item">
-                  <div class="project-info">Pédagogie</div>
+                  <div class="project-info">{{ .Params.section_2_text }}</div>
                 </div>
-                <div role="listitem" class="collection-item-3 w-dyn-item">
-                  <div class="project-info">Médiation</div>
-                </div>
+                
               </div>
             </div>
           </div>
           <div class="div-projet-info">
-            <div class="project-label">contact</div>
+            <div class="project-label">{{ .Params.section_3_title }}</div>
             <div class="w-dyn-list">
               <div role="list" class="w-dyn-items">
                 <div role="listitem" class="collection-item-4 w-dyn-item">
                   <a href="/contact" class="project-info link"
-                    >Pierre-Elie Coursac</a
+                    >{{ .Params.section_3_text }}</a
                   >
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="projects-chapeau-h2">
-          Projet collaboratif et interdisciplinaire permettant à des élèves de
-          travailler avec un intervenant industriel et des structures
-          territoriales associées
-        </div>
         <div
           id="w-node-f812293c-1e7d-39d4-e3a0-4dba34c21497-e71d4f13"
           class="project-description w-richtext"
         >
-          <h3>Génèse des CCN</h3>
-          <p>
-            Il y a bientôt 20 ans Erasme initiait les Classes Culturelles
-            Numériques (CCN) en accompagnant chaque année plus de 60 classes
-            (1500-3000 élèves) du CM1 à la 3ème. Tout au long de l’année
-            scolaire, chaque classe, encadrée par un enseignant et un
-            professionnel externe, réfléchit et produit de manière collaborative
-            en lien avec des sujets aussi variés que le zéro déchet, les usages
-            urbains, le cinéma, la musique électronique, les archives,
-            l’écriture ou encore le théâtre. Ces projets CCN permettent aux
-            élèves non seulement de découvrir des métiers par la rencontre avec
-            un professionnel mais également d’acquérir des compétences
-            numériques (recherche documentaire, protection des données
-            personnelles…) notamment via l’utilisation d’un outil en ligne :
-            laclasse.net, lui-même initialement conçu et produit par Erasme.
-          </p>
-          <h3>Ajout du thème industriel</h3>
-          <p>
-            Depuis 2020 la thématique industrielle a été ajoutée aux CCN à titre
-            expérimental. Les élèves ont eu l’opportunité de concevoir et de
-            créer un flacon de parfum accompagnés par Bruno Champauzac,
-            ingénieur du groupe Thalès. L’analyse des pratiques et usages des
-            designs de parfums célèbres a permis aux élèves de rédiger un cahier
-            des charges adapté aux besoins de leurs futurs clients. Ils ont
-            ensuite créé un prototype du flacon et de son emballage ainsi que
-            des supports de communication accompagnant la sortie du produit. Ils
-            ont ainsi pu aborder des sujets tels que la production à grande
-            échelle, le marketing ainsi que le design thinking.
-          </p>
-          <p>
-            En 2021, en partenariat avec le Campus Lumière une seconde
-            thématique a été ajoutée avec pour objet l’industrie de la lumière
-            et de l’éclairage. Les élèves ont pu s’interroger sur son importance
-            dans leur quotidien ainsi qu’à une utilisation plus responsable des
-            éclairages. Aidés de Jérôme Donna, éclairagiste et artiste lumière
-            de la Ville de Lyon, chaque classe a sélectionné un lieu son choix à
-            transformer ou valoriser grâce à la lumière. Ils ont ensuite imaginé
-            une scénographie qu’ils ont présentée sous forme de croquis, plans
-            3D ou dessins, accompagnée d’une fiche technique précisant le
-            matériel nécessaire requis. En 2022 un kit technique (ruban LED,
-            variateur) sera fourni à chaque classe.
-          </p>
-          <p>
-            En 2022 en partenariat avec UNITEX (organisation professionnelle) et
-            Text&#x27;In (campus des qualifications) l’industrie textile vient
-            enrichir le programme, avec un travail de design et d’éco-conception
-            d’un sac à dos. Ce projet permettra aux élèves de découvrir les
-            principes de l’économie circulaire et de sa familiariser avec les
-            techniques et métiers du secteur. Les collégiens sont accompagnés
-            par Jean-Baptiste Martin, designer de mode spécialiste des vêtements
-            et accessoires de sport et plein air. Les élèves de collège
-            concevront les sacs et réaliseront des maquettes puis en fin
-            d&#x27;année scolaire des lycéens (bac pro) interviendront pour la
-            phase de prototypage avancée. De nombreux partenariats,
-            interventions et événements viennent enrichir ce parcours
-            pédagogique. Les matériaux utilisés seront principalement des
-            vêtements professionnels à recycler fournis la Métropole de Lyon.<br />‍
-          </p>
-          <p>
-            Partenaires généraux : DRANE, DRAFPIC, Académie<br />Accompagnement
-            et médiation : Réseau Canopé<br />Remerciements : La Ruche
-            Industrielle, Institut Lumière, Jtekt
-          </p>
-          <p>‍</p>
+        {{ .Content }}
         </div>
-        <div class="div-videos-projet">
-          <div
-            style="padding-top: 56.20608899297424%"
-            class="video-projet w-video w-embed"
-          >
-            <iframe
-              class="embedly-embed"
-              src="//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2F5nUco1oTMwE%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D5nUco1oTMwE&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2F5nUco1oTMwE%2Fhqdefault.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=youtube"
-              width="854"
-              height="480"
-              scrolling="no"
-              title="YouTube embed"
-              frameborder="0"
-              allow="autoplay; fullscreen"
-              allowfullscreen="true"
-            ></iframe>
-          </div>
-          <div
-            class="video-projet w-condition-invisible w-dyn-bind-empty w-video w-embed"
-          ></div>
-        </div>
-        <div>
-          <div class="w-dyn-list">
-            <script
-              type="text/x-wf-template"
-              id="wf-template-e247ae1c-06d9-7a82-e520-2ec56059922e"
-            >
-              %3Cdiv%20role%3D%22listitem%22%20class%3D%22collection-item-2%20w-dyn-item%20w-dyn-repeater-item%22%3E%3Cimg%20src%3D%22https%3A%2F%2Fuploads-ssl.webflow.com%2F611a6fec34c6eda18d68ea00%2F63500bc0ab4a6b535bbb0d2e_choco_cannelle.jpg%22%20loading%3D%22lazy%22%20alt%3D%22%22%20sizes%3D%22(max-width%3A%20479px)%2087vw%2C%20(max-width%3A%20767px)%2090vw%2C%20(max-width%3A%20991px)%2084vw%2C%2070vw%22%20srcset%3D%22https%3A%2F%2Fuploads-ssl.webflow.com%2F611a6fec34c6eda18d68ea00%2F63500bc0ab4a6b535bbb0d2e_choco_cannelle-p-500.jpg%20500w%2C%20https%3A%2F%2Fuploads-ssl.webflow.com%2F611a6fec34c6eda18d68ea00%2F63500bc0ab4a6b535bbb0d2e_choco_cannelle-p-800.jpg%20800w%2C%20https%3A%2F%2Fuploads-ssl.webflow.com%2F611a6fec34c6eda18d68ea00%2F63500bc0ab4a6b535bbb0d2e_choco_cannelle-p-1080.jpg%201080w%2C%20https%3A%2F%2Fuploads-ssl.webflow.com%2F611a6fec34c6eda18d68ea00%2F63500bc0ab4a6b535bbb0d2e_choco_cannelle-p-1600.jpg%201600w%2C%20https%3A%2F%2Fuploads-ssl.webflow.com%2F611a6fec34c6eda18d68ea00%2F63500bc0ab4a6b535bbb0d2e_choco_cannelle.jpg%202000w%22%20class%3D%22image-16%22%2F%3E%3C%2Fdiv%3E
-            </script>
-            <div role="list" class="w-dyn-items">
-              <div
-                role="listitem"
-                class="collection-item-2 w-dyn-item w-dyn-repeater-item"
-              >
-                <img
-                  src="https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/63500bc0ab4a6b535bbb0d2e_choco_cannelle.jpg"
-                  loading="lazy"
-                  alt=""
-                  sizes="(max-width: 479px) 87vw, (max-width: 767px) 90vw, (max-width: 991px) 84vw, 70vw"
-                  srcset="
-                    https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/63500bc0ab4a6b535bbb0d2e_choco_cannelle-p-500.jpg   500w,
-                    https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/63500bc0ab4a6b535bbb0d2e_choco_cannelle-p-800.jpg   800w,
-                    https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/63500bc0ab4a6b535bbb0d2e_choco_cannelle-p-1080.jpg 1080w,
-                    https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/63500bc0ab4a6b535bbb0d2e_choco_cannelle-p-1600.jpg 1600w,
-                    https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/63500bc0ab4a6b535bbb0d2e_choco_cannelle.jpg        2000w
-                  "
-                  class="image-16"
-                />
-              </div>
-              <div
-                role="listitem"
-                class="collection-item-2 w-dyn-item w-dyn-repeater-item"
-              >
-                <img
-                  src="https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/63500bc0afc40b65cc9d76e4_fiche_persona.jpg"
-                  loading="lazy"
-                  alt=""
-                  sizes="(max-width: 479px) 87vw, (max-width: 767px) 90vw, (max-width: 991px) 84vw, 70vw"
-                  srcset="
-                    https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/63500bc0afc40b65cc9d76e4_fiche_persona-p-500.jpg   500w,
-                    https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/63500bc0afc40b65cc9d76e4_fiche_persona-p-800.jpg   800w,
-                    https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/63500bc0afc40b65cc9d76e4_fiche_persona-p-1080.jpg 1080w,
-                    https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/63500bc0afc40b65cc9d76e4_fiche_persona-p-1600.jpg 1600w,
-                    https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/63500bc0afc40b65cc9d76e4_fiche_persona.jpg        2000w
-                  "
-                  class="image-16"
-                />
-              </div>
-              <div
-                role="listitem"
-                class="collection-item-2 w-dyn-item w-dyn-repeater-item"
-              >
-                <img
-                  src="https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/63500bc0504e45f562a36bab_ccn_industrie1.jpg"
-                  loading="lazy"
-                  alt=""
-                  sizes="(max-width: 479px) 87vw, (max-width: 767px) 90vw, (max-width: 991px) 84vw, 70vw"
-                  srcset="
-                    https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/63500bc0504e45f562a36bab_ccn_industrie1-p-500.jpg   500w,
-                    https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/63500bc0504e45f562a36bab_ccn_industrie1-p-800.jpg   800w,
-                    https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/63500bc0504e45f562a36bab_ccn_industrie1-p-1080.jpg 1080w,
-                    https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/63500bc0504e45f562a36bab_ccn_industrie1-p-1600.jpg 1600w,
-                    https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/63500bc0504e45f562a36bab_ccn_industrie1.jpg        2000w
-                  "
-                  class="image-16"
-                />
-              </div>
-              <div
-                role="listitem"
-                class="collection-item-2 w-dyn-item w-dyn-repeater-item"
-              >
-                <img
-                  src="https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/63500bc01ebd5f369bf431a8_tsunami.jpg"
-                  loading="lazy"
-                  alt=""
-                  sizes="(max-width: 479px) 87vw, (max-width: 767px) 90vw, (max-width: 991px) 84vw, 70vw"
-                  srcset="
-                    https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/63500bc01ebd5f369bf431a8_tsunami-p-500.jpg   500w,
-                    https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/63500bc01ebd5f369bf431a8_tsunami-p-800.jpg   800w,
-                    https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/63500bc01ebd5f369bf431a8_tsunami-p-1080.jpg 1080w,
-                    https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/63500bc01ebd5f369bf431a8_tsunami-p-1600.jpg 1600w,
-                    https://uploads-ssl.webflow.com/611a6fec34c6eda18d68ea00/63500bc01ebd5f369bf431a8_tsunami.jpg        2000w
-                  "
-                  class="image-16"
-                />
-              </div>
-            </div>
-            <div class="w-dyn-hide w-dyn-empty"><div>No items found.</div></div>
-          </div>
-        </div>
+
       </div>
     </div>
     {{ partial "footer.html" . }}
