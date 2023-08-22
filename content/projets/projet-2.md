@@ -2,7 +2,7 @@
 title: Project 2
 date: '2023-07-05T13:19:46.000Z'
 draft: false
-textBtn: fddffd
+textBtn: test
 image: /63500bc0ab4a6b535bbb0d2e_choco_cannelle-p-1080.jpg
 section_1_title: fdgfg
 section_1_text: fgsfdg
